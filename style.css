@@ -3,18 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+.corpo{
+    position: relative;
+    
+}
 .inicio{
-    background-color: aqua;
+    background-image: linear-gradient(to top, white,pink, rgb(245, 95, 205));
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
+    top: 50%;
+    position: relative;
 }
 .envelope{
     width: 390px;
+    z-index: 99;
+    position: absolute;
 
+}
+#botao{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    z-index: 100;
+    bottom: 60px;
+    border-radius: 50%;
 }
 
 .meio{
@@ -72,4 +85,13 @@
 }
 .cindelera{
     left: -20px;
+}
+.arvore{
+    width: 100px;
+    bottom: 0;
+}
+.arvore2{
+    width: 70px;
+    right: 0;
+    bottom: 0;
 }
