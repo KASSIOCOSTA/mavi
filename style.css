@@ -18,7 +18,7 @@
 }
 
 .meio{
-    background-color: rgb(0, 255, 30);
+    background-image: linear-gradient(to top, white,pink, rgb(245, 95, 205));
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -38,6 +38,14 @@
 }
 .position{
     position: absolute;
+}
+.arco{
+    width: 300px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0.8;
 }
 .castelo{
     width: 250px;
