@@ -3,9 +3,91 @@
     padding: 0;
     box-sizing: border-box;
 }
+.carregar{
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top,white,rgb(251, 181, 193), rgb(250, 171, 184));
+
+
+}
+
+.box.show {
+    animation: aparecer 0.5s ease forwards;
+}
+
+.box.hide {
+    animation: sumir 0.5s ease forwards;
+}
+
+
+.carregar img{
+    width: 300px;
+    
+    
+}
 .corpo{
     position: relative;
+    animation: aparecer 2s ease forwards;
     
+
+    display: none; 
+}
+
+.carregar-img{
+    animation: sumir99 5s ease forwards;
+}
+
+
+
+
+@keyframes sumir99 {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+
+.nuvem1{
+    width: 110px;
+    position: absolute;
+   top: 90px;
+   animation: nuvem 35s linear infinite;
+}
+.nuvem2{
+    width: 160px;
+    position: absolute;
+   top: 150px;
+   animation: nuvem 25s linear infinite;
+}
+.nuvem3{
+    width: 180px;
+    position: absolute;
+   top: 350px;
+   animation: nuvem 15s linear infinite;
+}
+@keyframes nuvem{
+    0%{
+        left: -200px;
+    }
+    100%{
+        left: 200%;
+    }
 }
 .inicio{
     background-image: linear-gradient(to top, white,pink, rgb(245, 95, 205));
@@ -18,7 +100,8 @@
     width: 390px;
     z-index: 99;
     position: absolute;
-
+    left: 50%;
+    transform: translate(-50%);
 }
 #botao{
     position: absolute;
@@ -34,12 +117,13 @@
     background-image: linear-gradient(to top, white,pink, rgb(245, 95, 205));
     min-height: 100vh;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: relative;
-}
+} /*Display flex*/
 .video{
     position: relative;
+    
 }
 .video video{
     width: 100%;
@@ -48,6 +132,16 @@
 .informacoes{
     min-height: 65vh;
     position: relative;
+    animation: sugir 3s ease forwards;
+}
+
+.informacoes-cima{
+    font-variant: small-caps;
+    color: rgb(138, 4, 145);
+}
+.informacoes-baixo{
+ font-size: 1.2em;
+ color: rgb(243, 101, 212);
 }
 .position{
     position: absolute;
@@ -67,24 +161,72 @@
     transform: translate(-50%);
     opacity: 0.9;
 }
+
+    
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+@keyframes entrar1 {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+@keyframes sugir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
 .princesa{
     width: 80px;
     bottom: 10px;
 }
 .bela{
     left: 70px;
+    animation: entrar 9s ease forwards;
 }
 .branca{
     left: 240px;
+    animation: entrar1 9s ease forwards;
+    
 }
 .rapuzel{
     left: 150px;
+    animation: sugir 9s ease forwards;
 }
 .loira{
     right: 0;
+    animation: entrar1 9s ease forwards;
 }
 .cindelera{
     left: -20px;
+    animation: entrar 9s ease forwards;
 }
 .arvore{
     width: 100px;

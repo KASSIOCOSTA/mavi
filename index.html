@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="carregar" id="carregar">
+        <img src="img/mavi.png" class="img-inicio">
+    </div>
 
-<div class="corpo">
-    <div class="inicio">
+<div class="corpo" style="overflow-x: hidden;" id="corpo">
+    <div id="inicio" class="inicio" style="overflow-x: hidden;">
         <img src="img/arco-iris.png" class="arco">
         <img src="img/arvore-left.png" class="position arvore">
         <img src="img/arvore-rigth.png" class="position arvore2">
-            <img src="img/castelo.png" class="position castelo">
-            
+        <img src="img/castelo.png" class="position castelo">
+        <img src="img/nuvem 2.png" class="nuvem1">
+        <img src="img/nuvem 2.png" class="nuvem2">
+        <img src="img/nuvem 2.png" class="nuvem3">
            
 
         <div style="z-index: 99; position: absolute; top: 200px; width: 100%; height: 230px;">
@@ -24,22 +29,31 @@
         </div>
 
     </div>
-    <div class="meio">
+    <div class="meio" id="meio">
         <div class="video">
             <video src="media/video.mp4"  id="video"></video>
             
+            
         </div>
         <div class="informacoes" style="z-index: 99;">
-            <div style="width: 100%;; position: absolute; top: 70px; display: flex; justify-content: center;">
+            <div style="width: 100%;; position: absolute; top: 70px; display: flex; justify-content: center; z-index: 999;">
                 <p style="text-align: center;">O Reino encantado está em festa <br>para comemorar o aniversário da <br>mais linda princesa! </p>
                 <div style="position: absolute; top: 70px; display: flex; gap: 10px;">
-                    <p> <span >Domingo</span> <br>08 de março</p>
-                    <img src="" alt="imagem">
-                     <p> <span>Horario</span> <br>18:00hrs</p>
+                    <p> <span class="informacoes-cima">Domingo</span> <br><span class="informacoes-baixo">08 de março</span></p>
+
+                    <img src="img/d894d8bf43e804b188a99f1d1894a4cf.png" style="width: 30px; z-index: 99;">
+
+                     <p> <span class="informacoes-cima">Horario</span> <br><span class="informacoes-baixo">18:00hrs</span></p>
                 </div>
                 <p style="position: absolute; top: 140px; z-index: 99;">Local: rua tal endereco tal</p>
+                <button style="position: absolute; top: 180px; z-index: 99; padding: 5px; border-radius: 5px; ">Confirmar <br> Presença</button>
                 
             </div>
+             <img src="img/arvore-left.png" class="position arvore"  style="bottom: 15px;">
+        <img src="img/arvore-rigth.png" class="position arvore2" style="bottom: 15px;">
+             <img src="img/nuvem 2.png" class="nuvem1" style="opacity: 0.5;">
+        
+            <img src="img/rosas.png" style="position: absolute; top: -55px; width: 380px; left: 50%; transform: translate(-50%);">
             <img src="img/mavi.png" style="width: 250px;top:-50px; position: absolute; left: 50%;transform: translate(-50%);" >
             <img src="img/arco-iris.png" class="arco">
             <img src="img/castelo.png" class="position castelo">
@@ -57,6 +71,46 @@
     </div>
 
 </div>
+
+
+
+
+<script>
+   
+   
+const inicio = document.querySelector('#inicio');
+   const botao = document.querySelector('#botao');
+   const video = document.querySelector('#video');
+   const carregar = document.querySelector('#carregar');
+    const corpo = document.querySelector('#corpo');
+    const convite = document.querySelector('#meio');
+   
+   
+    window.addEventListener('load', () => {
+        const img = document.querySelector('.img-inicio')
+            setTimeout(()=>{
+                img.classList.add('carregar-img')
+                setTimeout(()=>{
+                    corpo.style.display = "block"
+                    carregar.style.display = "none"
+                },3000)
+            
+            
+            },1000)
+
+    })
+
+        botao.addEventListener('click', () => {
+            convite.style.display = "flex"
+            inicio.style.display = "none"
+            video.play()
+
+        })
+
+    
+
+    
+</script>
     
 </body>
 </html>
