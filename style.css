@@ -97,7 +97,7 @@
     position: relative;
 }
 .envelope{
-    width: 390px;
+    width: 320px;
     z-index: 99;
     position: absolute;
     left: 50%;
@@ -109,7 +109,7 @@
     transform: translate(-50%);
     padding: 20px;
     z-index: 100;
-    bottom: 60px;
+    bottom: 90px;
     border-radius: 50%;
 }
 
@@ -209,24 +209,25 @@
 }
 .bela{
     left: 70px;
-    animation: entrar 9s ease forwards;
+    animation: entrar 9s ease forwards, dancar 9s linear infinite;;
 }
 .branca{
     left: 240px;
-    animation: entrar1 9s ease forwards;
+    animation: entrar 9s ease forwards, dancar1 9s linear infinite;
     
 }
 .rapuzel{
     left: 150px;
-    animation: sugir 9s ease forwards;
+    animation: sugir 9s ease forwards, meio 9s linear infinite;
 }
 .loira{
     right: 0;
-    animation: entrar1 9s ease forwards;
+    animation: entrar 9s ease forwards, dancar1 9s linear infinite;
 }
 .cindelera{
     left: -20px;
-    animation: entrar 9s ease forwards;
+    animation: entrar 9s ease forwards, dancar 9s linear infinite;
+    
 }
 .arvore{
     width: 100px;
@@ -236,4 +237,44 @@
     width: 70px;
     right: 0;
     bottom: 0;
+}
+
+@keyframes dancar {
+    0%,100% {
+        
+        transform: translateX(30px);
+    }
+
+    50% {
+        
+        transform: translateX(0);
+        
+    }
+    
+}
+@keyframes dancar1 {
+    0%,100% {
+        
+        transform: translateX(-30px);
+    }
+
+    50% {
+        
+        transform: translateX(0);
+        
+    }
+    
+}
+@keyframes meio {
+    0%,100% {
+        
+        transform: scale(1);
+    }
+
+    50% {
+        
+        transform: scale(1.1);
+        
+    }
+    
 }
