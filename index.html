@@ -41,7 +41,7 @@
     </div>
     <div class="meio" id="meio">
         <div class="video">
-            <video src="media/video.mp4"  id="video"></video>
+            <video src="media/video.mp4" playsinline webkit-playsinline id="video"></video>
             
             
         </div>
@@ -56,7 +56,7 @@
                      <p> <span class="informacoes-cima">Horario</span> <br><span class="informacoes-baixo">18:00hrs</span></p>
                 </div>
                 <p style="position: absolute; top: 140px; z-index: 99;">Local: rua tal endereco tal</p>
-                <button style="position: absolute; top: 180px; z-index: 99; padding: 5px; border-radius: 5px; ">Confirmar <br> Presença</button>
+                <button style="position: absolute; top: 180px; z-index: 99; padding: 5px; border-radius: 5px; " id="confirmarPresenca">Confirmar <br> Presença</button>
                 
             </div>
              <img src="img/arvore-left.png" class="position arvore"  style="bottom: 15px;">
@@ -116,6 +116,17 @@ const inicio = document.querySelector('#inicio');
             video.play()
 
         })
+        const confirm = document.querySelector('#confirmarPresenca')
+
+        confirm.addEventListener('click', () => {
+             const tel = "5598970016960"
+        const msg = "Olá!\u{1F44B}\nGostaria de Confirmar minha presença no aniversário da princesa Mavi!\u{1F451} \nEstarei presente no dia 08 de março às 18h\nMuito obrigado pelo convite!\u{1F496}"
+
+        window.open(`https://wa.me/${tel}?text=${encodeURIComponent(msg)}`) 
+        })
+       
+
+        
 
     
 
