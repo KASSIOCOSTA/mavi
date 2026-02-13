@@ -278,3 +278,26 @@
     }
     
 }
+
+.text-sombra{
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black, 
+    -1px 1px black,
+     1px -1px black;
+
+
+}
+@keyframes sugir3 {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+       
+        
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
